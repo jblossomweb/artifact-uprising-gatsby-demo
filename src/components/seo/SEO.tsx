@@ -7,31 +7,43 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
+import { Helmet, HelmetProps } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
+export interface Meta {
+  title?: string
+  description?: string
+  author?: string
+  [key: string]: string | undefined
+}
+
+export interface Props {
+  description?: string
+  lang?: string
+  meta?: HelmetProps["meta"] | Meta[] | any[]
+  title: string
+}
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
       }
-    `
-  )
+    }
+  }
+`
+
+const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+  const { site } = useStaticQuery(query)
 
   const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -67,7 +79,7 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta || [])}
     />
   )
 }
