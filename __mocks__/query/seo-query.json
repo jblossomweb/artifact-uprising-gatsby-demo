@@ -1,0 +1,11 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "Artifact Uprising Gatsby Demo",
+        "description": "This is a Gatsby demo for Artifact Uprising.",
+        "author": "John Blossom"
+      }
+    }
+  }
+}

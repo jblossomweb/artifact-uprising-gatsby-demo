@@ -2,17 +2,30 @@
 import React from "react"
 import { PageProps, Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Template from "../templates/default"
 import SEO from "../components/seo"
 
-type DataProps = {
+export type DataProps = {
   site: {
     buildTime: string
   }
 }
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
-  <Layout>
+export interface Props extends Partial<PageProps<DataProps>> {
+  path: PageProps["path"]
+  data: DataProps
+}
+
+export const SiteBuildTimeQuery = graphql`
+  query SiteBuildTimeQuery {
+    site {
+      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+    }
+  }
+`
+
+const UsingTypescript: React.FC<Props> = ({ data, path }) => (
+  <Template>
     <SEO title="Using TypeScript" />
     <h1>Gatsby supports TypeScript by default!</h1>
     <p>
@@ -36,15 +49,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       .
     </p>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </Template>
 )
 
 export default UsingTypescript
-
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`
