@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+
+  postgres:
+    image: postgres:alpine
+    container_name: "postgres"
+    volumes:
+    - ./app/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: demo_products
+    ports:
+      - "5432:5432"
+
+  # api:
+  #   container_name: "api"
+  #   depends_on:
+  #     - "postgres"
+  #     # - "api"
+
+  gatsby:
+    container_name: "gatsby"
+    depends_on:
+      - "postgres"
+      # - "api"
+    volumes:
+      - ./app/gatsby:/gatsby
+      - /gatsby/node_modules
+    build:
+      context: .
+      dockerfile: ./gatsby.Dockerfile
+    environment:
+      - NODE_ENV=development
+      - GATSBY_WEBPACK_PUBLICPATH=/
+      - DB_CONNECT=postgres://user:pass@postgres/demo_products
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+      - "6006:6006"
+      - "9929:9929"
+      - "9230:9230"
+    command: npm start

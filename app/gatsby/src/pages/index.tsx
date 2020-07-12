@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Template from "../templates/default"
+import Layout from "../layouts/default"
 import { GatsbyAstronaut } from "../components/images"
 import SEO from "../components/seo"
 
 const IndexPage: React.FC = () => (
-  <Template>
+  <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -17,7 +17,7 @@ const IndexPage: React.FC = () => (
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/page-3/">Go to page 3</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Template>
+  </Layout>
 )
 
 export default IndexPage

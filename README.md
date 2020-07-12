@@ -1,99 +1,182 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+<h1>
+  <a href="https://www.docker.com/" target="_blank">
+    <img alt="Docker" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" height="60" />
   </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
+  &nbsp;
+  <a href="https://www.gatsbyjs.org/" target="_blank">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" height="60" />
+  </a>
+  &nbsp;
+  <a href="https://reactjs.org/" target="_blank">
+    <img alt="React" src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" height="60" />
+  </a>
+  &nbsp;
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img alt="Typescript" src="https://seeklogo.com/images/T/typescript-logo-B29A3F462D-seeklogo.com.png" height="60" />
+  </a>
+  &nbsp;
+  <a href="https://jestjs.io/" target="_blank">
+    <img alt="Jest" src="https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png" height="60" />
+  </a>
+  &nbsp;
+  <a href="https://storybook.js.org/" target="_blank">
+    <img alt="Storybook" src="https://pbs.twimg.com/profile_images/1100804485616566273/sOct-Txm_200x200.png" height="60" />
+  </a>
+  &nbsp;
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# Artifact Uprising Gatsby Demo
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+![](https://i.giphy.com/media/g9582DNuQppxC/giphy.webp)
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Clone this repository, and navigate into its directory.**
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    git clone git@github.com:jblossomweb/artifact-uprising-gatsby-demo.git
+    cd artifact-uprising-gatsby-demo
     ```
 
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+2.  **Build the dev environment, and start the containers.**
 
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    make dev
     ```
 
-1.  **Open the source code and start editing!**
+    ☕ get a cup of coffee, this may take a few minutes.
 
-    Your site is now running at `http://localhost:8000`!
+3.  **Open the source code and start editing!**
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    Your site is now running at [`http://localhost:8000`](http://localhost:8000)<br>
+    Your GraphQL is now running at [`http://localhost:8000/\_\_\_graphql`](http://localhost:8000/___graphql)
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+## 💫 Handy Commands
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Note: To rule out potential node version mismatches, it would be wise to run any npm commands from inside the running container. Some shell scripts are in place to make this more intuitive.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+These scripts can be aliased for ergonomic purposes. So be sure to run this first:
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```shell
+source .aliases
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+### Commands
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+1.  **Install an npm module to Gatsby app**
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+    This also rewrites npm_modules to the host for IDE/debugging purposes.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+    ```shell
+    gat-install some-npm-module
+    ```
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+2.  **Install a dev npm module to Gatsby app**
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+    This also rewrites npm_modules to the host for IDE/debugging purposes.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+    ```shell
+    gat-install-dev some-npm-module
+    ```
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+3.  **Remove an npm module from Gatsby app**
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+    This also rewrites npm_modules to the host for IDE/debugging purposes.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+    ```shell
+    gat-remove some-npm-module
+    ```
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+4.  **Run the Gatsby app's linter**
 
-## 🎓 Learning Gatsby
+    ```shell
+    gat-run format
+    ```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+5.  **Run the Gatsby app's tests in watch mode**
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+    ```shell
+    gat-run test:watch
+    ```
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+6.  **Run the Gatsby app's tests and generate a coverage report**
 
-## 💫 Deploy
+    ```shell
+    gat-run test:coverage
+    ```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+    Now open your browser to:<br> [`file:///path/to/artifact-uprising-gatsby-demo/coverage/lcov-report/index.html`](file:///path/to/artifact-uprising-gatsby-demo/coverage/lcov-report/index.html)<br>
+    (where `/path/to/artifact-uprising-gatsby-demo/` is the path to this directory)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+7.  **Run Gatsby app's Storybook**
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+    ```shell
+    gat-run storybook
+    ```
+
+    Now open your browser to:<br>[`http://localhost:6006/`](http://localhost:6006/)
+
+8.  **Stop all containers**
+
+    ctrl-C will only stop following the logs.<br>
+    Run this to stop all containers.<br>
+
+    ```shell
+    make stop
+    ```
+
+9.  **Start all containers**
+
+    Run this to start all containers.<br>
+
+    ```shell
+    make start
+    ```
+
+10. **Stop and take down all containers**
+
+    Run this to take down all containers.<br>
+
+    ```shell
+    make down
+    ```
+
+11. **Stand up and start all containers**
+
+    Run this to stand up and start all containers.<br>
+
+    ```shell
+    make up
+    ```
+
+12. **Rebuild, re-install modules, and restart dev containers**
+
+    Run this to rebuild from scratch.<br>
+    You may want to prune if done frequently.<br>
+
+    ```shell
+    make dev
+    ```
+
+    ☕ get a cup of coffee, this may take a few minutes.
+
+    Now open your browser to:<br>[http://localhost:8000/](http://localhost:8000/)
+
+13. **Follow logs**
+
+    Useful in the case one ctrl-C's out of them.<br>
+    Containers must be running.
+
+    ```shell
+    make logs
+    ```
+
+For more information and commands, see the following files for reference:
+
+- [`Makefile`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/Makefile)
+- [`.aliases`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/.aliases)
+- [`package.json`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/package.json)
+- [`gatsby.Dockerfile`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/gatsby.Dockerfile)
+- [`docker-compose.yml`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/docker-compose.yml)

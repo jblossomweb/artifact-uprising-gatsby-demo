@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   siteMetadata: {
     title: `Artifact Uprising Gatsby Demo`,
     description: `This is a Gatsby demo for Artifact Uprising.`,
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `src/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -30,5 +30,15 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    // postgresql db connection
+    {
+      resolve: "gatsby-source-pg",
+      options: {
+        connectionString: process.env.DB_CONNECT,
+        schema: "public",
+        refetchInterval: 60,
+      },
+    },
   ],
 }

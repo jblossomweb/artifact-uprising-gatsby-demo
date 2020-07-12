@@ -1,0 +1,16 @@
+#!/bin/sh
+
+exec < /dev/tty
+
+while read -p "Did you run the linter? (Y/n) " yn; do
+	case $yn in
+		[Yy] ) break;;
+		[Nn] ) ./scripts/gatsby-run.sh format; echo "\n\nlinter was run.\nplease add any changed files and try your commit again."; exit 1;;
+		* ) echo "Please answer y (yes) or n (no):" && continue;
+	esac
+done
+
+# run gatsby tests
+./scripts/gatsby-run.sh test
+
+exec <&-
