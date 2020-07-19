@@ -13,17 +13,31 @@ services:
     ports:
       - "5432:5432"
 
-  # api:
-  #   container_name: "api"
-  #   depends_on:
-  #     - "postgres"
-  #     # - "api"
+  api:
+    container_name: "api"
+    depends_on:
+      - postgres
+    volumes:
+      - ./app/api:/api
+      - /api/node_modules
+    build:
+      context: .
+      dockerfile: ./api.Dockerfile
+    environment:
+      - DB_CONNECT=postgres://user:pass@postgres/demo_products
+      - SESSION_COOKIE_NAME=demo_products_api_session
+      - SESSION_SECRET=iTsOuRsEcReTnEvErTeAcHtHeWuTaNg
+      - PORT=3000
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    command: npm run start:dev
 
   gatsby:
     container_name: "gatsby"
     depends_on:
       - "postgres"
-      # - "api"
+      - "api"
     volumes:
       - ./app/gatsby:/gatsby
       - /gatsby/node_modules

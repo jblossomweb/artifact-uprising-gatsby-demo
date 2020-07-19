@@ -1,0 +1,1 @@
+TRUNCATE TABLE public.products RESTART IDENTITY;

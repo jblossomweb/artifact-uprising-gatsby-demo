@@ -1,0 +1,4 @@
+{
+  "dev": { "ENV": "DB_CONNECT" },
+  "sql-file" : true
+}

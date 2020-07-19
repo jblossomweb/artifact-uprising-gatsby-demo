@@ -9,3 +9,6 @@ alias api-install=./scripts/api-install.sh
 alias api-install-dev=./scripts/api-install-dev.sh
 alias api-remove=./scripts/api-remove.sh
 alias api-reinstall=./scripts/api-reinstall.sh
+
+alias db-migration=./scripts/db-migration.sh
+alias db-migrate=./scripts/db-migrate.sh

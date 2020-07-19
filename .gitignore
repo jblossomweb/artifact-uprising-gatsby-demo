@@ -30,6 +30,9 @@ node_modules/
 app/gatsby/.cache/
 app/gatsby/public
 
+# api build
+app/api/build
+
 # local db persistence
 app/data
 
