@@ -2,7 +2,6 @@ import { Store } from "redux"
 import { AppState } from "./types"
 import initialState from "./initialState"
 import createStore from "./createStore"
-
 ;(window as any).__REDUX_DEVTOOLS_EXTENSION__ = jest.fn()
 
 describe("store/createStore", () => {
