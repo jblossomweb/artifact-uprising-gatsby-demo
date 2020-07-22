@@ -95,7 +95,9 @@ Requires `gatsby` container to be running. See [`Makefile`](https://github.com/j
 
 **Run all tests.**
 
-Runs Jest test runners for `app/api` and `app/gatsby`. All expected output will be See [`Makefile`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/Makefile) for details.
+Runs Jest test runners for `app/api` and `app/gatsby`. All expected output will be seen from the host terminal.
+
+See [`Makefile`](https://github.com/jblossomweb/artifact-uprising-gatsby-demo/blob/master/Makefile) for details.
 
 ### `make coverage`
 

@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`templates/default/footer default matches snapshot 1`] = `
-<footer>
-  © 
-  2020
-  , Built with
-   
-  <a
-    href="https://www.gatsbyjs.org"
-    target="_blank"
-  >
-    Gatsby
-  </a>
-</footer>
-`;
+exports[`layouts/default/footer default matches snapshot 1`] = `<footer />`;

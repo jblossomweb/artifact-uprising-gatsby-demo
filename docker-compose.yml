@@ -27,6 +27,7 @@ services:
       - DB_CONNECT=postgres://user:pass@postgres/demo_products
       - SESSION_COOKIE_NAME=demo_products_api_session
       - SESSION_SECRET=iTsOuRsEcReTnEvErTeAcHtHeWuTaNg
+      - CORS_ALLOW_ORIGIN=http://localhost:8000
       - PORT=3000
       - NODE_ENV=development
     ports:
@@ -47,6 +48,7 @@ services:
     environment:
       - NODE_ENV=development
       - GATSBY_WEBPACK_PUBLICPATH=/
+      - GATSBY_CART_API_URL=http://localhost:3000
       - DB_CONNECT=postgres://user:pass@postgres/demo_products
     ports:
       - "8000:8000"
@@ -54,4 +56,6 @@ services:
       - "6006:6006"
       - "9929:9929"
       - "9230:9230"
+      - "36515:36515"
+      - "34085:34085"
     command: npm start

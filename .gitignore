@@ -29,6 +29,7 @@ node_modules/
 # gatsby files
 app/gatsby/.cache/
 app/gatsby/public
+app/gatsby/coverage
 
 # api build
 app/api/build

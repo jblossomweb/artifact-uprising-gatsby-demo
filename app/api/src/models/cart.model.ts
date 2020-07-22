@@ -85,9 +85,11 @@ export const getTotals: Model = async (cart: CartItem.Props[]) => {
     }))
   const total: string = $(items.reduce((acc, item) => acc + numeric(item.ext), 0))
   const total_numeric: number = numeric(total)
+  const count: number = items.reduce((acc, item) => acc + item.qty, 0)
   return {
     items,
     total,
+    count,
     total_numeric,
   }
 }

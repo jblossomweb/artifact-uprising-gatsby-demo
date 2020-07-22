@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": 13,
+      "title": "School of Boxing",
+      "price": "$49.99",
+      "qty": 1,
+      "ext": "$49.99"
+    },
+    {
+      "id": 19,
+      "title": "Jet-Propelled Pogo Stick",
+      "price": "$29.99",
+      "qty": 2,
+      "ext": "$59.98"
+    }
+  ],
+  "count": 3,
+  "total": "$79.98",
+  "total_numeric": 79.98
+}

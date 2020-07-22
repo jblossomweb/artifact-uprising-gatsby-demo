@@ -1,7 +1,9 @@
+const { DB_CONNECT } = process.env
+
 export default {
   siteMetadata: {
-    title: `Artifact Uprising Gatsby Demo`,
-    description: `This is a Gatsby demo for Artifact Uprising.`,
+    title: `Acme Products`,
+    description: `This is a Gatsby demo.`,
     author: `John Blossom`,
   },
   plugins: [
@@ -35,9 +37,24 @@ export default {
     {
       resolve: "gatsby-source-pg",
       options: {
-        connectionString: process.env.DB_CONNECT,
+        connectionString: DB_CONNECT!,
         schema: "public",
         refetchInterval: 60,
+      },
+    },
+
+    // redux plugin
+    {
+      resolve: `gatsby-plugin-react-redux`,
+      options: {
+        pathToCreateStoreModule: "./src/store/createStore",
+        serialize: {
+          space: 0,
+          isJSON: true,
+          unsafe: false,
+        },
+        cleanupOnClient: true,
+        windowKey: "__PRELOADED_STATE__",
       },
     },
   ],

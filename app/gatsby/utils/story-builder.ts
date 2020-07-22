@@ -1,5 +1,6 @@
 import * as knobs from "@storybook/addon-knobs"
 import { storiesOf } from "@storybook/react"
+import "fontsource-roboto"
 
 const { withKnobs } = knobs
 
@@ -18,7 +19,7 @@ export interface Stories {
   [key: string]: Story
 }
 
-const storyBuilder = (stories: Stories, storyPath: string) => {
+export const storyBuilder = (stories: Stories, storyPath: string) => {
   const builtStories = storiesOf(storyPath, module)
   builtStories.addDecorator(withKnobs as any)
 
@@ -26,5 +27,3 @@ const storyBuilder = (stories: Stories, storyPath: string) => {
     builtStories.add(key, () => stories[key](knobs))
   })
 }
-
-export default storyBuilder

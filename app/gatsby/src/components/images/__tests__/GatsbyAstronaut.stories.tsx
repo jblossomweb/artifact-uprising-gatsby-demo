@@ -1,5 +1,6 @@
 import React from "react"
-import storyBuilder, {
+import {
+  storyBuilder,
   KnobsInterface,
   Stories,
 } from "../../../../utils/story-builder"

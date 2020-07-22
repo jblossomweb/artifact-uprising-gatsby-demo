@@ -73,16 +73,7 @@ gatsby-up:
 
 down:
 	# take down all containers
-	docker-compose down
-
-pg-down:
-	docker-compose down postgres
-
-api-down:
-	docker-compose down api
-
-gatsby-down:
-	docker-compose down gatsby
+	docker-compose down --remove-orphans
 
 start:
 	# start all containers

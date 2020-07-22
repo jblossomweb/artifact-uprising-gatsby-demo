@@ -1,16 +1,24 @@
 import React from "react"
-import storyBuilder, {
+import {
+  storyBuilder,
   KnobsInterface,
   Stories,
 } from "../../../../utils/story-builder"
+import mockCart from "../../../../__mocks__/api/cart.json"
+import mockError from "../../../../__mocks__/api/cart-error.json"
 import Header, { Props } from "./Header"
 
 const defaultProps = {
-  siteTitle: Header.defaultProps!.siteTitle as string,
+  title: Header.defaultProps!.title as Props["title"],
+  cart: Header.defaultProps!.cart as Props["cart"],
 }
 
 const sampleProps: Props = {
-  siteTitle: "Sample Site Title",
+  title: "Sample Site Title",
+  cart: mockCart,
+  setQty: (id, qty) => {
+    console.log(`setQty(${id}, ${qty})`)
+  },
 }
 
 const story = (knobProps: Props) => (
@@ -18,10 +26,11 @@ const story = (knobProps: Props) => (
   props: Props = knobProps
 ) => (
   <Header
-    siteTitle={knobs.text(
-      "siteTitle",
-      props.siteTitle || defaultProps.siteTitle
-    )}
+    title={knobs.text("title", props.title || "")}
+    fetching={knobs.boolean("fetching", !!props.fetching)}
+    cart={knobs.object("cart", props.cart)}
+    error={knobs.object("error", props.error)}
+    setQty={props.setQty}
   />
 )
 
@@ -31,8 +40,20 @@ export const stories: Stories = {
   }),
   "no title": story({
     ...sampleProps,
-    siteTitle: undefined,
+    title: undefined,
+  }),
+  "empty cart": story({
+    ...sampleProps,
+    cart: defaultProps.cart,
+  }),
+  fetching: story({
+    ...sampleProps,
+    fetching: true,
+  }),
+  error: story({
+    ...sampleProps,
+    error: mockError,
   }),
 }
 
-storyBuilder(stories, "templates/default/header")
+storyBuilder(stories, "layouts/default/header")

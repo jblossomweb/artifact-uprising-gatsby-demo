@@ -1,5 +1,5 @@
 import React from "react"
-import storyBuilder, { Stories } from "../../../utils/story-builder"
+import { storyBuilder, Stories } from "../../../utils/story-builder"
 import ThirdPage from "../page-3"
 
 const story = () => () => <ThirdPage />

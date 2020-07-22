@@ -1,9 +1,11 @@
+alias gat-cmd=./scripts/gatsby-cmd.sh
 alias gat-run=./scripts/gatsby-run.sh
 alias gat-install=./scripts/gatsby-install.sh
 alias gat-install-dev=./scripts/gatsby-install-dev.sh
 alias gat-remove=./scripts/gatsby-remove.sh
 alias gat-reinstall=./scripts/gatsby-reinstall.sh
 
+alias api-cmd=./scripts/api-cmd.sh
 alias api-run=./scripts/api-run.sh
 alias api-install=./scripts/api-install.sh
 alias api-install-dev=./scripts/api-install-dev.sh

@@ -42,7 +42,7 @@ const createPages: GatsbyCreatePages = async ({
 
     await createPage({
       path,
-      component: resolve("./src/templates/product/index.tsx"),
+      component: resolve("./src/page-templates/product/index.tsx"),
       context: {
         productId: product.id,
         imageId: imageNode.id,

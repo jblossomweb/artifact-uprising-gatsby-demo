@@ -1,0 +1,5 @@
+{
+  "type": "Request Error",
+  "message": "\"qty\" must be a number",
+  "status": 422
+}

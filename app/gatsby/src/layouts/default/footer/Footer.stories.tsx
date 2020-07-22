@@ -1,5 +1,6 @@
 import React from "react"
-import storyBuilder, {
+import {
+  storyBuilder,
   KnobsInterface,
   Stories,
 } from "../../../../utils/story-builder"
@@ -16,4 +17,4 @@ export const stories: Stories = {
   default: story(),
 }
 
-storyBuilder(stories, "templates/default/footer")
+storyBuilder(stories, "layouts/default/footer")
