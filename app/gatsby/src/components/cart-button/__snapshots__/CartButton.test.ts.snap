@@ -3,6 +3,7 @@
 exports[`components/cart-button invalid qty matches snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+  data-testid="addToCartButton"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -43,10 +44,12 @@ exports[`components/cart-button qty in cart matches snapshot 1`] = `
 >
   <div
     className="MuiInputBase-root MuiInput-root MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+    data-testid="qtyInput"
     onClick={[Function]}
   >
     <button
       className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+      data-testid="subtractButton"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -94,6 +97,7 @@ exports[`components/cart-button qty in cart matches snapshot 1`] = `
     />
     <button
       className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+      data-testid="addButton"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -146,6 +150,7 @@ exports[`components/cart-button qty in cart matches snapshot 1`] = `
 exports[`components/cart-button sample matches snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+  data-testid="addToCartButton"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}

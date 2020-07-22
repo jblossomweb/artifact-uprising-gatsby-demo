@@ -25,12 +25,14 @@ const CartButton: React.FC<Props> = ({
   return qtyInCart ? (
     <Style.Input>
       <Input
+        data-testid="qtyInput"
         type="number"
         disableUnderline
         value={qtyInCart}
         inputProps={{ min: 0, max: 99 }}
         startAdornment={
           <Button
+            data-testid="subtractButton"
             variant="outlined"
             onClick={() => {
               subtractFromCart()
@@ -41,6 +43,7 @@ const CartButton: React.FC<Props> = ({
         }
         endAdornment={
           <Button
+            data-testid="addButton"
             variant="outlined"
             onClick={() => {
               addToCart()
@@ -58,6 +61,7 @@ const CartButton: React.FC<Props> = ({
     </Style.Input>
   ) : (
     <Button
+      data-testid="addToCartButton"
       variant="outlined"
       onClick={() => {
         addToCart()

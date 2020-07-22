@@ -31,18 +31,25 @@ const story = (knobProps: Props) => (
   />
 )
 
-export const stories: Stories = {
+export const makeStories: (
+  injectActions?: Partial<Props>
+) => Stories = injectActions => ({
   sample: story({
     ...sampleProps,
+    ...injectActions,
   }),
   "qty in cart": story({
     ...sampleProps,
+    ...injectActions,
     qtyInCart: 1,
   }),
   "invalid qty": story({
     ...sampleProps,
+    ...injectActions,
     qtyInCart: -1,
   }),
-}
+})
+
+export const stories: Stories = makeStories()
 
 storyBuilder(stories, "components/cart-button")

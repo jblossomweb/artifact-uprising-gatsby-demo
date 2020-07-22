@@ -289,6 +289,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -500,6 +501,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -711,6 +713,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -898,6 +901,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1109,6 +1113,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1308,6 +1313,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1513,6 +1519,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1712,6 +1719,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1911,6 +1919,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -2116,6 +2125,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -2309,6 +2319,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -2520,6 +2531,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -2734,10 +2746,12 @@ Array [
             >
               <div
                 className="MuiInputBase-root MuiInput-root MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+                data-testid="qtyInput"
                 onClick={[Function]}
               >
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+                  data-testid="subtractButton"
                   disabled={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -2782,6 +2796,7 @@ Array [
                 />
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+                  data-testid="addButton"
                   disabled={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -3005,6 +3020,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -3210,6 +3226,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -3403,6 +3420,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -3596,6 +3614,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -3801,6 +3820,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -3997,10 +4017,12 @@ Array [
             >
               <div
                 className="MuiInputBase-root MuiInput-root MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+                data-testid="qtyInput"
                 onClick={[Function]}
               >
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+                  data-testid="subtractButton"
                   disabled={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -4045,6 +4067,7 @@ Array [
                 />
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+                  data-testid="addButton"
                   disabled={false}
                   onBlur={[Function]}
                   onClick={[Function]}
@@ -4250,6 +4273,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -4461,6 +4485,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -4660,6 +4685,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -4859,6 +4885,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -5070,6 +5097,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -5281,6 +5309,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -5474,6 +5503,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -5667,6 +5697,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -5860,6 +5891,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -6053,6 +6085,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -6252,6 +6285,7 @@ Array [
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+              data-testid="addToCartButton"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}

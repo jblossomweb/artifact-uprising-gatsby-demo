@@ -3,6 +3,7 @@ module.exports = {
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.stories.{js,jsx,ts,tsx}",
     "!src/**/*.test.{js,jsx,ts,tsx}",
+    "!src/services/**/index.{js,jsx,ts,tsx}",
   ],
   transform: {
     "^.+\\.[jt]sx?$": "<rootDir>/utils/jest-preprocess.js",
