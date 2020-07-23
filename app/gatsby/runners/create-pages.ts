@@ -4,7 +4,9 @@ import { createRemoteFileNode } from "gatsby-source-filesystem"
 import { GatsbyCreatePages } from "./types"
 import slugify from "../src/helpers/slugify"
 
-const createPages: GatsbyCreatePages = async ({
+export const createPages: (
+  createRemoteFileNode: Function
+) => GatsbyCreatePages = createRemoteFileNode => async ({
   graphql,
   store,
   cache,
@@ -27,10 +29,8 @@ const createPages: GatsbyCreatePages = async ({
     }
   `)
 
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i]
+  const processProduct = async (product: any) => {
     const path = `/product/${product.id}/${slugify(product.title)}`
-
     const imageNode = await createRemoteFileNode({
       url: product.imageUrl,
       store,
@@ -49,6 +49,8 @@ const createPages: GatsbyCreatePages = async ({
       },
     })
   }
+
+  await Promise.all(products.map(processProduct))
 }
 
-export default createPages
+export default createPages(createRemoteFileNode)
