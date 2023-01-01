@@ -42,10 +42,10 @@
     "db-migrate-pg": "^1.2.2",
     "nodemon": "^2.0.4",
     "raw-loader": "^4.0.1",
-    "ts-loader": "^8.0.0",
+    "ts-loader": "^8.4.0",
     "typescript": "^3.9.6",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^2.5.0",
     "webpack-shell-plugin": "^0.5.0"
   }
